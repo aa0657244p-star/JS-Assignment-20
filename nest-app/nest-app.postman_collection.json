@@ -1,0 +1,449 @@
+{
+  "info": {
+    "_postman_id": "55299544-6e8b-4d16-a9eb-2166a117b3f5",
+    "name": "nest-app",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "53857239",
+    "_collection_link": "https://go.postman.co/collection/53857239-55299544-6e8b-4d16-a9eb-2166a117b3f5?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "register",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"fname\": \"Ahmed\",\r\n  \"lname\": \"Mohamed\",\r\n  \"email\": \"ahmedd_final@test.com\",\r\n  \"password\": \"123456\",\r\n  \"age\": 25\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "login",
+      "event": [
+        {
+          "listen": "test",
+          "script": {
+            "type": "text/javascript",
+            "exec": [
+              ""
+            ]
+          }
+        }
+      ],
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"ahmed_test@test.com\",\r\n  \"password\": \"123456\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDEyNjkwMzU4NzBlY2FkNDc2YmMxZCIsImVtYWlsIjoiYWhtZWRkX2ZpbmFsQHRlc3QuY29tIiwiaWF0IjoxNzkyMDkxNzkyLCJleHAiOjE3OTI2OTY1OTJ9.UaQwLHfjO7mltES4eRCboQ_WjKKkTYNztqzrB9bJ3M8",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/user/profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "user",
+            "profile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create category",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Electronics\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/category",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "category"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create brand",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Samsung\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/brand",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "brand"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create product",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"name\": \"Galaxy S24\",\r\n  \"description\": \"Samsung Phone\",\r\n  \"price\": 1000,\r\n  \"stock\":50,\r\n  \"categoryId\": \"6ad128ba35870ecad476bc1e\",\r\n  \"brandId\": \"6ad1297135870ecad476bc1f\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/product",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "product pagination",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/product/paginate?page=1&limit=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "product",
+            "paginate"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "limit",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "add to cart",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"productId\": \"6ad12df335870ecad476bc21\",\r\n  \"quantity\": 2\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/cart/add",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "cart",
+            "add"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "get cart",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:3000/cart",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "cart"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create order",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"address\": \"Cairo\",\r\n  \"phone\": \"0123456789\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/order",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "order"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "create coupon",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"code\": \"SAVE10\",\r\n  \"discountPercent\": 10,\r\n  \"maxUses\": 100,\r\n  \"startDate\": \"2026-01-01\",\r\n  \"endDate\": \"2026-12-31\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/coupon",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "coupon"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "payment intent",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjZhZDExZjRjMzU4NzBlY2FkNDc2YmMxOCIsImVtYWlsIjoiYWhtZWRfdGVzdEB0ZXN0LmNvbSIsImlhdCI6MTc5MjA5MTkyOCwiZXhwIjoxNzkyNjk2NzI4fQ.HB91BrmWCVyCgZ-jq3o-g2U0ytSbHG6tk9gd5SOo9xc",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"amount\": 100,\r\n  \"currency\": \"egp\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/payment/create-intent",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "3000",
+          "path": [
+            "payment",
+            "create-intent"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}
